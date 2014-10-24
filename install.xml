@@ -321,7 +321,7 @@ if ($return_config)
 		</operation>
 
 	</file>
-	<file name="Themes/default/languages/Modifications.turkish-utf8.php" error="skip">
+	<file name="Themes/default/languages/ManageSettings.turkish-utf8.php" error="skip">
 		<operation>
 			<search position="end"></search>
 			<add><![CDATA[
@@ -342,7 +342,7 @@ if ($return_config)
 	]]></add>
 		</operation>
 	</file>
-	<file name="Themes/default/languages/Modifications.english.php" error="skip">
+	<file name="Themes/default/languages/ManageSettings.english.php" error="skip">
 		<operation>
 			<search position="end"></search>
 			<add><![CDATA[
@@ -363,7 +363,7 @@ if ($return_config)
 	]]></add>
 		</operation>
 	</file>
-	<file name="Themes/default/languages/Modifications.turkish.php" error="skip">
+	<file name="Themes/default/languages/ManageSettings.turkish.php" error="skip">
 		<operation>
 			<search position="end"></search>
 			<add><![CDATA[
