@@ -16,11 +16,15 @@
 			</td>
 			<td valign="top" id="upshrinkLeftBarTD">
 				<div id="upshrinkLeftBar" style="width:',$modSettings['sideleftwidth'] ? $modSettings['sideleftwidth'] :'200px','; margin-right:4px; overflow:auto;" >
-					',$modSettings['sideleft1'],'';
-					echo'<div id="php">';eval($modSettings['sideleftphp']);echo'</div>';
+				', empty($modSettings['sideleft1']) ? '' : '<div class="cat_bar"><h3 class="catbg">'.$modSettings['lefthtmlbaslik'].'</h3></div>'.$modSettings['sideleft1'].'', '
+				', empty($modSettings['sideleftphp']) ? '' : '<div class="cat_bar"><h3 class="catbg">'.$modSettings['leftphpbaslik'].'</h3></div>';eval($modSettings['sideleftphp']);
+				echo'<div id="php">';eval($modSettings['sideleftphp']);echo'</div>';
 				if (!empty($modSettings['sidelefthaberetkin']))
 				{
 				$array = ssi_boardNews($modSettings['sidelefthaber'], $modSettings['sideleftsay'], null, 1000, 'array');
+					echo'<div class="cat_bar">
+							<h3 class="catbg">',$modSettings['lbaslik'],'</h3>
+						</div>';
 					global $memberContext;	
 					foreach ($array as $news)
 					 {
@@ -53,11 +57,14 @@
 			{
 			echo '<td valign="top" id="upshrinkRightBarTD">
 				<div id="upshrinkRightBar" style="width:',$modSettings['siderightwidth'] ? $modSettings['siderightwidth'] :'200px','; margin-right:4px; overflow:auto;">
-				',$modSettings['sideright1'],'';
-				echo'<div id="php">';eval($modSettings['siderightphp']);echo'</div>';
+				', empty($modSettings['sideright1']) ? '' : '<div class="cat_bar"><h3 class="catbg">'.$modSettings['righthtmlbaslik'].'</h3></div>'.$modSettings['sideright1'].'', '
+				', empty($modSettings['siderightphp']) ? '' : '<div class="cat_bar"><h3 class="catbg">'.$modSettings['rightphpbaslik'].'</h3></div>';eval($modSettings['siderightphp']);
 				if (!empty($modSettings['siderighthaberetkin']))
 				{
 				$array = ssi_boardNews($modSettings['siderighthaber'], $modSettings['siderightsay'], null, 1000, 'array');
+					echo'<div class="cat_bar">
+							<h3 class="catbg">',$modSettings['rbaslik'],'</h3>
+						</div>';
 					global $memberContext;	
 					foreach ($array as $news)
 					 {
@@ -130,17 +137,23 @@ function teknoromisidebarSettings($return_config = false)
 	      
 			array('check', 'sideleft'),
 			array('text', 'sideleftwidth'),
+			array('text', 'lefthtmlbaslik'),
 			array('large_text', 'sideleft1'),
+			array('text', 'leftphpbaslik'),
 			array('large_text', 'sideleftphp'),
 			array('check', 'sidelefthaberetkin'),
+			array('text', 'lbaslik'),
 			array('select', 'sidelefthaber', $boards,),
 			array('int', 'sideleftsay'),
 			'',
 			array('check', 'sideright'),
 			array('text', 'siderightwidth'),
+			array('text', 'righthtmlbaslik'),
 			array('large_text', 'sideright1'),
+			array('text', 'rightphpbaslik'),
 			array('large_text', 'siderightphp'),
 			array('check', 'siderighthaberetkin'),
+			array('text', 'rbaslik'),
 	        array('select', 'siderighthaber', $boards,),
 			array('int', 'siderightsay'),
 	);
@@ -185,6 +198,12 @@ if ($return_config)
 	$txt['siderightsay']='Bölüm Haberi Kaç Adet Gösterilecek';
 	$txt['siderightphp']='Php kodlar içindir';
 	$txt['sideleftphp']='Php kodlar içindir';
+	$txt['lbaslik']='Bölüm Haberi Başlık Girin';
+	$txt['lefthtmlbaslik']='Html Alanı Başlık Girin';
+	$txt['rbaslik']='Bölüm Haberi Başlık Girin';
+	$txt['righthtmlbaslik']='Html Alanı Başlık Girin';
+	$txt['leftphpbaslik']='php Alanı Başlık Girin';
+	$txt['rightphpbaslik']='php Alanı Başlık Girin';
 	]]></add>
 		</operation>
 	</file>
@@ -208,6 +227,12 @@ if ($return_config)
 	$txt['siderightsay']='BoardNews How Many pcs to show';
 	$txt['siderightphp']='Php codes';
 	$txt['sideleftphp']='Php codes';
+	$txt['lbaslik']='BoardNews Title';
+	$txt['lefthtmlbaslik']='Html Code Title';
+	$txt['rbaslik']='BoardNews Title';
+	$txt['righthtmlbaslik']='Html Code Title';
+	$txt['leftphpbaslik']='php Code Title';
+	$txt['rightphpbaslik']='php Code Title';
 	]]></add>
 		</operation>
 	</file>
@@ -231,6 +256,12 @@ if ($return_config)
 	$txt['siderightsay']='Bölüm Haberi Kaç Adet Gösterilecek';
 	$txt['siderightphp']='Php kodlar içindir';
 	$txt['sideleftphp']='Php kodlar içindir';
+	$txt['lbaslik']='Bölüm Haberi Başlık Girin';
+	$txt['lefthtmlbaslik']='Html Alanı Başlık Girin';
+	$txt['rbaslik']='Bölüm Haberi Başlık Girin';
+	$txt['righthtmlbaslik']='Html Alanı Başlık Girin';
+	$txt['leftphpbaslik']='php Alanı Başlık Girin';
+	$txt['rightphpbaslik']='php Alanı Başlık Girin';
 	]]></add>
 		</operation>
 	</file>
@@ -243,10 +274,12 @@ if ($return_config)
 	#teknoleft{margin-left: -20px;background: url('../images/sidebar.png') no-repeat scroll 0% 0% transparent;}
 	#teknoright{margin-left: 4px;background: url('../images/sidebar1.png') no-repeat scroll 0% 0% transparent;}
 	#teknoleft:hover,#teknoright:hover{}
-	#upshrinkLeftBar,#upshrinkRightBar{border: 1px solid #AAA;text-align: center;border-radius: 5px;}
-	.sidehaber{text-align: left;margin: 4px;}
+	#upshrinkLeftBar,#upshrinkRightBar{border-radius: 5px;background:linear-gradient(to bottom, #f2f9fe 0%,#d6f0fd 100%);border: 1px solid #BECAD5;float: left;width: 99%;}
+	#upshrinkRightBar{box-shadow: 2px 2px 2px #C8C8C8;}
+	#upshrinkLeftBar{box-shadow: -2px 2px 2px #C8C8C8;}
+	.sidehaber{text-align: left;margin: 4px;font-size: 9px;}
 	.sideBaslik img{float: left;}
-	.sideBaslik a{color: orangered;}
+	.sideBaslik a{color: orangered;font-size: 9px;}
 	.snrj{text-align: left;color:#000;}
 	.snrj .avatar{width:20px;float: left;margin-left: 5px;}
 	]]></add>
