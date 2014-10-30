@@ -183,7 +183,6 @@ if ($return_config)
 			<search position="end"></search>
 			<add><![CDATA[
 /* teknoromi sidebar smf.teknoromi.com yapımıdır */			
-	$txt['teknoromisidebartitle']='Teknoromi Sidebar Ayarları';
 	$txt['sideleft']='Sol Sidebarı Aktif Et';
 	$txt['sideleft1']='Html veya Yazı Girebilirsiniz';
 	$txt['sideright']='Sağ Sidebarı Aktif Et';
@@ -212,7 +211,6 @@ if ($return_config)
 			<search position="end"></search>
 			<add><![CDATA[
 /* teknoromi sidebar smf.teknoromi.com yapımıdır */			
-	$txt['teknoromisidebartitle']='Teknoromi Sidebar Mod';
 	$txt['sideleft']='Left Panel Active';
 	$txt['sideleft1']='Html and Textarea post';
 	$txt['sideright']='Right Panel Active';
@@ -241,7 +239,6 @@ if ($return_config)
 			<search position="end"></search>
 			<add><![CDATA[
 /* teknoromi sidebar smf.teknoromi.com yapımıdır */			
-	$txt['teknoromisidebartitle']='Teknoromi Sidebar Ayarları';
 	$txt['sideleft']='Sol Sidebarı Aktif Et';
 	$txt['sideleft1']='Html veya Yazı Girebilirsiniz';
 	$txt['sideright']='Sağ Sidebarı Aktif Et';
@@ -265,6 +262,33 @@ if ($return_config)
 	]]></add>
 		</operation>
 	</file>
+		<file name="Themes/default/languages/Admin.turkish-utf8.php" error="skip">
+		<operation>
+			<search position="end"></search>
+			<add><![CDATA[
+/* smf.teknoromi.com yapımıdır */			
+	$txt['teknoromisidebartitle']='Teknoromi Sidebar Ayarları';
+	]]></add>
+		</operation>
+	</file>
+	<file name="Themes/default/languages/Admin.turkish.php" error="skip">
+		<operation>
+			<search position="end"></search>
+			<add><![CDATA[
+/* smf.teknoromi.com yapımıdır */			
+	$txt['teknoromisidebartitle']='Teknoromi Sidebar Ayarları';
+	]]></add>
+		</operation>
+	</file>
+	<file name="Themes/default/languages/Admin.english.php" error="skip">
+		<operation>
+			<search position="end"></search>
+			<add><![CDATA[
+/* smf.teknoromi.com yapımıdır */			
+	$txt['teknoromisidebartitle']='Teknoromi Sidebar Mod';
+	]]></add>
+		</operation>
+	</file>	
    <file name="Themes/default/css/index.css">
 		<operation>
 			<search position="end"></search>
@@ -275,8 +299,8 @@ if ($return_config)
 	#teknoright{margin-left: 4px;background: url('../images/sidebar1.png') no-repeat scroll 0% 0% transparent;}
 	#teknoleft:hover,#teknoright:hover{}
 	#upshrinkLeftBar,#upshrinkRightBar{border-radius: 5px;background:linear-gradient(to bottom, #f2f9fe 0%,#d6f0fd 100%);border: 1px solid #BECAD5;float: left;width: 99%;}
-	#upshrinkRightBar{box-shadow: 2px 2px 2px #C8C8C8;}
-	#upshrinkLeftBar{box-shadow: -2px 2px 2px #C8C8C8;}
+	#upshrinkRightBar{box-shadow: 2px 2px 2px #C8C8C8;margin-left: 5px;padding: 5px;}
+	#upshrinkLeftBar{box-shadow: -2px 2px 2px #C8C8C8;margin-right: 5px;padding: 5px;}
 	.sidehaber{text-align: left;margin: 4px;font-size: 9px;}
 	.sideBaslik img{float: left;}
 	.sideBaslik a{color: orangered;font-size: 9px;}
