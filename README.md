@@ -1,4 +1,4 @@
 Teknoromi-sidebar
 =================
 
-http://smf.teknoromi.com
+http://smf.konusal.com
