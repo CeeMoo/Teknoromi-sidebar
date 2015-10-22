@@ -36,10 +36,10 @@
 			<search position="end"></search>
 			<add><![CDATA[
 	/* teknoromi sidebar http://smf.konusal.com yapımıdır */		
-	#teknoleft,#teknoright{width: 20px;border: medium none;height: 20px;position: absolute;}
-	#teknoleft{margin-left: -20px;background: url('../images/sidebar.png') no-repeat scroll 0% 0% transparent;}
-	#teknoright{margin-left: 4px;background: url('../images/sidebar1.png') no-repeat scroll 0% 0% transparent;}
-	#teknoleft:hover,#teknoright:hover{}
+	#teknoleft,#teknoright{width: 18px;border: medium none;height: 100%;display:block; position: absolute;}
+	#teknoleft{margin-left: -20px;background: transparent none repeat scroll 0% 0%;}
+	#teknoright{margin-left: 1px;background: transparent none repeat scroll 0% 0%;}
+	#teknoleft:hover,#teknoright:hover{background: #36B6D2;}
 	#upshrinkLeftBar,#upshrinkRightBar{border-radius: 5px;background:linear-gradient(to bottom, #f2f9fe 0%,#d6f0fd 100%);border: 1px solid #BECAD5;float: left;width: 99%;}
 	#upshrinkRightBar{box-shadow: 2px 2px 2px #C8C8C8;margin-left: 5px;padding: 5px;}
 	#upshrinkLeftBar{box-shadow: -2px 2px 2px #C8C8C8;margin-right: 5px;padding: 5px;}

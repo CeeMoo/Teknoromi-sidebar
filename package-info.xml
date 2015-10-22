@@ -13,8 +13,6 @@
 		<require-file name="teknoromisidebar.english.php" destination="$languagedir" />
 		<require-file name="teknoromisidebar.turkish.php" destination="$languagedir" />
 		<require-file name="teknoromisidebar.turkish-utf8.php" destination="$languagedir" />
-		<require-file name="sidebar.png" destination="$imagesdir" />
-		<require-file name="sidebar1.png" destination="$imagesdir" />
 		<code>install.php</code>
 		<redirect url="?action=admin;area=modsettings;sa=teknoromisidebar" timeout="1000"/> 
 	</install>
@@ -24,8 +22,6 @@
 		<remove-file name="$languagedir/teknoromisidebar.english.php" />
 		<remove-file name="$languagedir/teknoromisidebar.turkish.php" />
 		<remove-file name="$languagedir/teknoromisidebar.turkish-utf8.php" />
-		<remove-file name="$imagesdir/sidebar.png" />
-		<remove-file name="$imagesdir/sidebar1.png" />
 		<code>install.php</code>
 		<redirect url="?action=admin;area=packages;sa=browse" timeout="1000"/> 
 	</uninstall>
