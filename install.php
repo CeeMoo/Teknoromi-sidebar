@@ -22,6 +22,8 @@ foreach ($hooks as $hook => $function)
 // If we're using SSI, tell them we're done
 if (SMF == 'SSI')
 	echo 'Database changes are complete!';
+	
+	Deneme
 
 ?>
 
